@@ -19,6 +19,8 @@ spec:
         app: python-demo
 
     spec:
+      imagePullSecrets:
+      - name: ghcr-secret
       containers:
       - name: python-demo
         image: ghcr.io/sridevi0616/talos-python-demo:latest
