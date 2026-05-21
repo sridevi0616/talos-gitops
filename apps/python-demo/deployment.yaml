@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: python-demo
+  labels:
+    app: python-demo
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: python-demo
+
+  template:
+    metadata:
+      labels:
+        app: python-demo
+
+    spec:
+      containers:
+      - name: python-demo
+        image: ghcr.io/sridevi0616/talos-python-demo:latest
+
+        ports:
+        - containerPort: 5000
+
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 15
+          periodSeconds: 20
