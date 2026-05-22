@@ -24,7 +24,7 @@ spec:
       containers:
       - name: backend
 
-        image: ghcr.io/sridevi0616/backend:v0
+        image: ghcr.io/sridevi0616/backend:v29
 
         ports:
         - containerPort: 5000
