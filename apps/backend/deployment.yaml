@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: backend
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: backend
+
+  template:
+    metadata:
+      labels:
+        app: backend
+
+    spec:
+
+      imagePullSecrets:
+      - name: ghcr-secret
+
+      containers:
+      - name: backend
+
+        image: ghcr.io/sridevi0616/backend:v0
+
+        ports:
+        - containerPort: 5000
