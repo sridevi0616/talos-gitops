@@ -23,7 +23,7 @@ spec:
       - name: ghcr-secret
       containers:
       - name: python-demo
-        image: ghcr.io/sridevi0616/talos-python-demo:10424b04ac3fc9d421b0c3ee08b263c67ef4fff7
+        image: ghcr.io/sridevi0616/talos-python-demo:v8
 
         ports:
         - containerPort: 5000
