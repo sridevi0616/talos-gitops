@@ -3,6 +3,7 @@ kind: Deployment
 
 metadata:
   name: backend
+  namespace: multi-service
 
 spec:
   replicas: 3
