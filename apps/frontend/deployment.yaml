@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: frontend
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: frontend
+
+  template:
+    metadata:
+      labels:
+        app: frontend
+
+    spec:
+
+      imagePullSecrets:
+      - name: ghcr-secret
+
+      containers:
+      - name: frontend
+
+        image: ghcr.io/sridevi0616/frontend:v0
+
+        ports:
+        - containerPort: 5000
