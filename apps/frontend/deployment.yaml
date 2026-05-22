@@ -25,7 +25,7 @@ spec:
       containers:
       - name: frontend
 
-        image: ghcr.io/sridevi0616/frontend:v29
+        image: ghcr.io/sridevi0616/frontend:v30
 
         ports:
         - containerPort: 5000
