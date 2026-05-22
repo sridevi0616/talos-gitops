@@ -3,6 +3,7 @@ kind: Deployment
 
 metadata:
   name: frontend
+  namespace: multi-service
 
 spec:
   replicas: 2
