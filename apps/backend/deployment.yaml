@@ -25,7 +25,7 @@ spec:
       containers:
       - name: backend
 
-        image: ghcr.io/sridevi0616/backend:v7
+        image: ghcr.io/sridevi0616/backend:v8
 
         ports:
         - containerPort: 5000
